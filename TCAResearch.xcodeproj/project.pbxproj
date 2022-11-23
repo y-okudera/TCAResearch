@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B655BE6E292DF94800EB8566 /* ItemsApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE6D292DF94800EB8566 /* ItemsApiClient */; };
+		B655BE70292DF94800EB8566 /* UsersApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE6F292DF94800EB8566 /* UsersApiClient */; };
+		B655BE72292DF94800EB8566 /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE71292DF94800EB8566 /* Components */; };
+		B655BE74292DF94800EB8566 /* Representable in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE73292DF94800EB8566 /* Representable */; };
+		B655BE76292DF94800EB8566 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE75292DF94800EB8566 /* AppFeature */; };
+		B655BE78292DF94800EB8566 /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE77292DF94800EB8566 /* Logger */; };
+		B655BE7A292DF94800EB8566 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE79292DF94800EB8566 /* Models */; };
+		B655BE7C2931C58C00EB8566 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B655BE7B2931C58C00EB8566 /* App.swift */; };
+		B655BE7E2931EBC600EB8566 /* SearchHistoryClient in Frameworks */ = {isa = PBXBuildFile; productRef = B655BE7D2931EBC600EB8566 /* SearchHistoryClient */; };
 		B683E0C529291AEE00547593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683E0C429291AEE00547593 /* AppDelegate.swift */; };
-		B683E0C729291AEE00547593 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683E0C629291AEE00547593 /* SceneDelegate.swift */; };
-		B683E0C929291AEE00547593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683E0C829291AEE00547593 /* ViewController.swift */; };
-		B683E0CC29291AEE00547593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B683E0CA29291AEE00547593 /* Main.storyboard */; };
 		B683E0CE29291AEF00547593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B683E0CD29291AEF00547593 /* Assets.xcassets */; };
 		B683E0D129291AEF00547593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B683E0CF29291AEF00547593 /* LaunchScreen.storyboard */; };
 		B683E0DC29291AEF00547593 /* TCAResearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683E0DB29291AEF00547593 /* TCAResearchTests.swift */; };
@@ -36,11 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B655BE66292DF8ED00EB8566 /* Clients */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Clients; path = Packages/Clients; sourceTree = "<group>"; };
+		B655BE67292DF8FB00EB8566 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Features; path = Packages/Features; sourceTree = "<group>"; };
+		B655BE68292DF8FB00EB8566 /* Logger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Logger; path = Packages/Logger; sourceTree = "<group>"; };
+		B655BE69292DF8FB00EB8566 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Models; sourceTree = "<group>"; };
+		B655BE6A292DF8FB00EB8566 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = Packages/DesignSystem; sourceTree = "<group>"; };
+		B655BE7B2931C58C00EB8566 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B683E0C129291AEE00547593 /* TCAResearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAResearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683E0C429291AEE00547593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B683E0C629291AEE00547593 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B683E0C829291AEE00547593 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B683E0CB29291AEE00547593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B683E0CD29291AEF00547593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B683E0D029291AEF00547593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B683E0D229291AEF00547593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +65,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B655BE78292DF94800EB8566 /* Logger in Frameworks */,
+				B655BE74292DF94800EB8566 /* Representable in Frameworks */,
+				B655BE7E2931EBC600EB8566 /* SearchHistoryClient in Frameworks */,
+				B655BE7A292DF94800EB8566 /* Models in Frameworks */,
+				B655BE76292DF94800EB8566 /* AppFeature in Frameworks */,
+				B655BE72292DF94800EB8566 /* Components in Frameworks */,
+				B655BE70292DF94800EB8566 /* UsersApiClient in Frameworks */,
+				B655BE6E292DF94800EB8566 /* ItemsApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +96,12 @@
 		B683E0B829291AEE00547593 = {
 			isa = PBXGroup;
 			children = (
+				B683E0F7292935EB00547593 /* Packages */,
 				B683E0C329291AEE00547593 /* TCAResearch */,
 				B683E0DA29291AEF00547593 /* TCAResearchTests */,
 				B683E0E429291AEF00547593 /* TCAResearchUITests */,
 				B683E0C229291AEE00547593 /* Products */,
+				B691BB8B2929406F00355212 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +118,8 @@
 		B683E0C329291AEE00547593 /* TCAResearch */ = {
 			isa = PBXGroup;
 			children = (
+				B655BE7B2931C58C00EB8566 /* App.swift */,
 				B683E0C429291AEE00547593 /* AppDelegate.swift */,
-				B683E0C629291AEE00547593 /* SceneDelegate.swift */,
-				B683E0C829291AEE00547593 /* ViewController.swift */,
-				B683E0CA29291AEE00547593 /* Main.storyboard */,
 				B683E0CD29291AEF00547593 /* Assets.xcassets */,
 				B683E0CF29291AEF00547593 /* LaunchScreen.storyboard */,
 				B683E0D229291AEF00547593 /* Info.plist */,
@@ -127,6 +144,25 @@
 			path = TCAResearchUITests;
 			sourceTree = "<group>";
 		};
+		B683E0F7292935EB00547593 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B655BE66292DF8ED00EB8566 /* Clients */,
+				B655BE6A292DF8FB00EB8566 /* DesignSystem */,
+				B655BE67292DF8FB00EB8566 /* Features */,
+				B655BE68292DF8FB00EB8566 /* Logger */,
+				B655BE69292DF8FB00EB8566 /* Models */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B691BB8B2929406F00355212 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +179,16 @@
 			dependencies = (
 			);
 			name = TCAResearch;
+			packageProductDependencies = (
+				B655BE6D292DF94800EB8566 /* ItemsApiClient */,
+				B655BE6F292DF94800EB8566 /* UsersApiClient */,
+				B655BE71292DF94800EB8566 /* Components */,
+				B655BE73292DF94800EB8566 /* Representable */,
+				B655BE75292DF94800EB8566 /* AppFeature */,
+				B655BE77292DF94800EB8566 /* Logger */,
+				B655BE79292DF94800EB8566 /* Models */,
+				B655BE7D2931EBC600EB8566 /* SearchHistoryClient */,
+			);
 			productName = TCAResearch;
 			productReference = B683E0C129291AEE00547593 /* TCAResearch.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +279,6 @@
 			files = (
 				B683E0D129291AEF00547593 /* LaunchScreen.storyboard in Resources */,
 				B683E0CE29291AEF00547593 /* Assets.xcassets in Resources */,
-				B683E0CC29291AEE00547593 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B683E0C929291AEE00547593 /* ViewController.swift in Sources */,
+				B655BE7C2931C58C00EB8566 /* App.swift in Sources */,
 				B683E0C529291AEE00547593 /* AppDelegate.swift in Sources */,
-				B683E0C729291AEE00547593 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B683E0CA29291AEE00547593 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B683E0CB29291AEE00547593 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B683E0CF29291AEF00547593 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +478,9 @@
 				INFOPLIST_FILE = TCAResearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +506,9 @@
 				INFOPLIST_FILE = TCAResearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +638,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B655BE6D292DF94800EB8566 /* ItemsApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ItemsApiClient;
+		};
+		B655BE6F292DF94800EB8566 /* UsersApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UsersApiClient;
+		};
+		B655BE71292DF94800EB8566 /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Components;
+		};
+		B655BE73292DF94800EB8566 /* Representable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Representable;
+		};
+		B655BE75292DF94800EB8566 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+		B655BE77292DF94800EB8566 /* Logger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Logger;
+		};
+		B655BE79292DF94800EB8566 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		B655BE7D2931EBC600EB8566 /* SearchHistoryClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchHistoryClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B683E0B929291AEE00547593 /* Project object */;
 }
