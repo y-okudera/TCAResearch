@@ -36,8 +36,6 @@ public struct AutoCarouselView: View {
         ) { item in
             if let url = URL(string: item.item.user.profileImageUrl) {
                 KFImage(url)
-                    .loadDiskFileSynchronously()
-                    .cacheMemoryOnly()
                     .resizable()
                     .scaledToFit()
                     .frame(height: 300)

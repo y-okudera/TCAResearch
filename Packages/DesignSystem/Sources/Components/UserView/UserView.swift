@@ -23,8 +23,6 @@ public struct UserView: View {
                 .frame(width: 16.0)
             if let url = URL(string: user.profileImageUrl) {
                 KFImage(url)
-                    .loadDiskFileSynchronously()
-                    .cacheMemoryOnly()
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60.0, height: 60.0)

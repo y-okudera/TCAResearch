@@ -113,6 +113,12 @@ let package = Package(
                 .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
             ]
         ),
+        .testTarget(
+            name: "SearchHistoryClientTests",
+            dependencies: [
+                "SearchHistoryClient",
+            ]
+        ),
         .target(
             name: "UsersApiClient",
             dependencies: [

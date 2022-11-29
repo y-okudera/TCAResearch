@@ -9,8 +9,8 @@ import Foundation
 
 public struct Item: Decodable, Equatable, Sendable {
 
-    public let renderedBody: String
-    public let body: String
+//    public let renderedBody: String
+//    public let body: String
     public let coediting: Bool
     public let commentsCount: Int
     public let createdAt: String?
@@ -55,42 +55,64 @@ public struct TeamMembership: Decodable, Equatable, Sendable {
 
 // MARK: - Mock
 extension Item {
-    public static var mock: Self {
-        .init(
-            renderedBody: "<h1>Example</h1>",
-            body: "# Example",
+
+    public static func mock(id: String) -> Self {
+        let profileImageUrl = AssetExtractor.createLocalUrl(forImageNamed: "sportman_icon", in: .module)!.absoluteString
+        return Self(
             coediting: false,
-            commentsCount: 100,
-            createdAt: "2000-01-01",
-            group: .init(
-                createdAt: "2000-01-01",
-                description: "This group is for developers.",
-                name: "Dev",
-                private: false,
-                updatedAt: "2000-01-01",
-                urlName: "dev"
-            ),
-            id: "c686397e4a0f4f11683d",
-            likesCount: 100,
+            commentsCount: 0,
+            createdAt: "2021-12-07T14:30:22+09:00",
+            group: nil,
+            id: id,
+            likesCount: 12,
             private: false,
-            reactionsCount: 100,
-            stocksCount: 100,
+            reactionsCount: 0,
+            stocksCount: 2,
             tags: [
                 .init(
-                    name: "Ruby",
-                    versions: [
-                        "0.0.1",
-                    ]
-                )
+                    name: "AdventCalendar",
+                    versions: []
+                ),
+                .init(
+                    name: "iOS",
+                    versions: []
+                ),
+                .init(
+                    name: "Swift",
+                    versions: []
+                ),
+                .init(
+                    name: "Airdrop",
+                    versions: []
+                ),
+                .init(
+                    name: "pokemon",
+                    versions: []
+                ),
             ],
-            title: "Example title",
-            updatedAt: "2000-01-01",
-            url: "https://qiita.com/Qiita/items/c686397e4a0f4f11683d",
-            user: .mock,
-            pageViewsCount: 100,
-            teamMembership: .init(
-                name: "Qiita キータ"
-            )
+            title: "AirDropでポケモンカードをシェアしてみた",
+            updatedAt: "2021-12-07T14:30:22+09:00",
+            url: "https://qiita.com/y-okudera/items/0601a59712455a53b8b0",
+            user: .init(
+                description: nil,
+                facebookId: nil,
+                followeesCount: 50,
+                followersCount: 61,
+                githubLoginName: "y-okudera",
+                id: "y-okudera",
+                itemsCount: 51,
+                linkedinId: nil,
+                location: "埼玉",
+                name: "Yuki Okudera",
+                organization: nil,
+                permanentId: 103695,
+                profileImageUrl: profileImageUrl,
+                teamOnly: false,
+                twitterScreenName: nil,
+                websiteUrl: nil
+            ),
+            pageViewsCount: 1309,
+            teamMembership: nil
         )
     }
 }
@@ -98,7 +120,15 @@ extension Item {
 extension Array where Element == Item {
     public static var mock: Self {
         [
-            .mock,
+            .mock(id: "1"),
+            .mock(id: "2"),
+            .mock(id: "3"),
+            .mock(id: "4"),
+            .mock(id: "5"),
+            .mock(id: "6"),
+            .mock(id: "7"),
+            .mock(id: "8"),
+            .mock(id: "9"),
         ]
     }
 }

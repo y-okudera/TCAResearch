@@ -40,8 +40,6 @@ public struct InfiniteCarouselView: View {
             VStack(spacing: 4.0) {
                 if let url = URL(string: item.item.user.profileImageUrl) {
                     KFImage(url)
-                        .loadDiskFileSynchronously()
-                        .cacheMemoryOnly()
                         .resizable()
                         .scaledToFit()
                         .frame(height: 100)

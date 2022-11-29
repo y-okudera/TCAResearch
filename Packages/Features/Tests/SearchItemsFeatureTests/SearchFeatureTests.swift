@@ -5,31 +5,44 @@
 //  Created by Yuki Okudera on 2022/10/16.
 //
 
+import ComposableArchitecture
+@testable import SearchItemsFeature
+import SnapshotTesting
+import TestHelper
 import XCTest
+import SwiftUI
 
 final class SearchFeatureTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        isRecording = true
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testSearchItemsView() throws {
+        XCTContext.runActivity(named: "itemsが空ではない") { _ in
+            let store = Store(
+                initialState: SearchItemsCore.State(),
+                reducer: SearchItemsCore()
+            )
+            SnapshotDevices.allCases.forEach {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+                let view = SearchItemsView(
+                    store: store
+                )
+                let viewStore = ViewStore(store)
+                viewStore.send(.itemsResult(.success(.mock)))
+
+                assertSnapshot(
+                    matching: view,
+                    as: .image(layout: $0.layout),
+                    named: "itemsが空ではない.\($0.rawValue)"
+                )
+            }
         }
     }
-
 }

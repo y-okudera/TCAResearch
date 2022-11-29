@@ -22,6 +22,7 @@ let package = Package(
         .package(name: "Logger", path: "../Logger"),
         .package(name: "Clients", path: "../Clients"),
         .package(name: "DesignSystem", path: "../DesignSystem"),
+        .package(name: "TestHelper", path: "../TestHelper"),
 
         // An extension to SwiftUI that will add the UISearchController.
         .package(url: "https://github.com/markvanwijnen/NavigationSearchBar.git", from: "1.3.0"),
@@ -33,6 +34,7 @@ let package = Package(
         .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.3.0"),
         .package(url: "https://github.com/pointfreeco/swift-identified-collections", from: "0.3.2"),
         .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.3.2"),
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.10.0"),
     ],
     targets: [
         .target(
@@ -105,6 +107,11 @@ let package = Package(
             name: "SearchItemsFeatureTests",
             dependencies: [
                 "SearchItemsFeature",
+                .product(name: "TestHelper", package: "TestHelper"),
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+            ],
+            exclude: [
+                "__Snapshots__",
             ]
         ),
         .target(

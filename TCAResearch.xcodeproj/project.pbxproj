@@ -58,6 +58,7 @@
 		B683E0E129291AEF00547593 /* TCAResearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCAResearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683E0E529291AEF00547593 /* TCAResearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAResearchUITests.swift; sourceTree = "<group>"; };
 		B683E0E729291AEF00547593 /* TCAResearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAResearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6BE1A3829358D7400A935FD /* TestHelper */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TestHelper; path = Packages/TestHelper; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,7 @@
 				B655BE67292DF8FB00EB8566 /* Features */,
 				B655BE68292DF8FB00EB8566 /* Logger */,
 				B655BE69292DF8FB00EB8566 /* Models */,
+				B6BE1A3829358D7400A935FD /* TestHelper */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

@@ -24,12 +24,10 @@ public struct ItemView: View {
                 .frame(width: 16.0)
             if let url = URL(string: item.user.profileImageUrl) {
                 KFImage(url)
-                    .loadDiskFileSynchronously()
                     .cacheMemoryOnly()
                     .resizable()
                     .scaledToFit()
                     .frame(width: 80.0, height: 80.0)
-                    .aspectRatio(contentMode: .fit)
             }
             VStack(alignment: .leading, spacing: 0) {
                 Text(item.title)
@@ -48,6 +46,6 @@ public struct ItemView: View {
 struct ItemView_Previews: PreviewProvider {
 
     static var previews: some View {
-        ItemView(item: .mock)
+        ItemView(item: .mock(id: "1"))
     }
 }

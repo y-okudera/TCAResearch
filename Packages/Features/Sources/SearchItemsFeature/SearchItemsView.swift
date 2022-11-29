@@ -89,7 +89,14 @@ struct SearchItemsView_Previews: PreviewProvider {
     static var previews: some View {
         SearchItemsView(
             store: .init(
-                initialState: .init(),
+                initialState: .init(
+                    searchQuery: "Swift",
+                    currentPage: 1,
+                    isLoading: false,
+                    isLoadingPage: false,
+                    items: .mock,
+                    webBrowserState: nil
+                ),
                 reducer: SearchItemsCore()
             )
         )
