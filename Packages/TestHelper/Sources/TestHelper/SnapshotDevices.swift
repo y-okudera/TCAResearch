@@ -8,15 +8,12 @@
 import SnapshotTesting
 
 public enum SnapshotDevices: String, CaseIterable {
-    case iPhone13ProMax
     case iPhone13
     case iPhone8Plus
     case iPhoneSe
 
     public var layout: SwiftUISnapshotLayout {
         switch self {
-        case .iPhone13ProMax:
-            return .device(config: .iPhone13ProMax)
         case .iPhone13:
             return .device(config: .iPhone13)
         case .iPhone8Plus:

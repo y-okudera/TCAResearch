@@ -8,35 +8,38 @@
 import ComposableArchitecture
 @testable import SearchItemsFeature
 import SnapshotTesting
+import SwiftUI
 import TestHelper
 import XCTest
-import SwiftUI
 
 final class SearchFeatureTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        isRecording = true
+    override func setUp() {
+        // 全て新しくSnapshotを撮る場合は、trueにします
+//        isRecording = true
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDown() {}
 
     func testSearchItemsView() throws {
         XCTContext.runActivity(named: "itemsが空ではない") { _ in
             let store = Store(
-                initialState: SearchItemsCore.State(),
+                initialState: .init(
+                    searchQuery: "長い検索語長い検索語長い検索語長い検索語長い検索語",
+                    currentPage: 1,
+                    isLoading: false,
+                    isLoadingPage: false,
+                    items: .mock,
+                    webBrowserState: nil
+                ),
                 reducer: SearchItemsCore()
             )
-            SnapshotDevices.allCases.forEach {
-
-                let view = SearchItemsView(
+            let view = NavigationView {
+                SearchItemsView(
                     store: store
                 )
-                let viewStore = ViewStore(store)
-                viewStore.send(.itemsResult(.success(.mock)))
-
+            }
+            SnapshotDevices.allCases.forEach {
                 assertSnapshot(
                     matching: view,
                     as: .image(layout: $0.layout),

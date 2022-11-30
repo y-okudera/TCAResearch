@@ -24,7 +24,6 @@ public struct ItemView: View {
                 .frame(width: 16.0)
             if let url = URL(string: item.user.profileImageUrl) {
                 KFImage(url)
-                    .cacheMemoryOnly()
                     .resizable()
                     .scaledToFit()
                     .frame(width: 80.0, height: 80.0)

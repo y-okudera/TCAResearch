@@ -9,8 +9,6 @@ import Foundation
 
 public struct Item: Decodable, Equatable, Sendable {
 
-//    public let renderedBody: String
-//    public let body: String
     public let coediting: Bool
     public let commentsCount: Int
     public let createdAt: String?
@@ -57,7 +55,7 @@ public struct TeamMembership: Decodable, Equatable, Sendable {
 extension Item {
 
     public static func mock(id: String) -> Self {
-        let profileImageUrl = AssetExtractor.createLocalUrl(forImageNamed: "sportman_icon", in: .module)!.absoluteString
+        let profileImageUrl = URL.localURLForXCAsset(name: "sportman_icon", in: .module)?.absoluteString ?? ""
         return Self(
             coediting: false,
             commentsCount: 0,
@@ -90,7 +88,7 @@ extension Item {
                     versions: []
                 ),
             ],
-            title: "AirDropでポケモンカードをシェアしてみた",
+            title: "長いタイトル長いタイトル長いタイトル長いタイトル長いタイトル",
             updatedAt: "2021-12-07T14:30:22+09:00",
             url: "https://qiita.com/y-okudera/items/0601a59712455a53b8b0",
             user: .init(
@@ -103,7 +101,7 @@ extension Item {
                 itemsCount: 51,
                 linkedinId: nil,
                 location: "埼玉",
-                name: "Yuki Okudera",
+                name: "長い名前長い名前長い名前長い名前長い名前",
                 organization: nil,
                 permanentId: 103695,
                 profileImageUrl: profileImageUrl,
